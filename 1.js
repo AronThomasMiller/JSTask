@@ -53,9 +53,16 @@ console.log(filterArray(array,1,21)); */
 //ЧЕТВЕРТЕ ЗАВДАННЯ
 
 /* function wordsCounter(str) { 
-    return str.split(" ").length;
-}
-console.log(wordsCounter("Hello, from Automaton team")); */
+    var arr = [];
+        var res = str.split(" ");
+        res.forEach(element => {
+            if(element.length !=0){
+                arr.push(element);
+            }
+        });
+    return arr.length;
+    }
+    console.log(wordsCounter("Hello,   from  Automaton team")); */
   
 //П'ЯТЕ ЗАВДАННЯ
 /* var calculator = {
@@ -107,21 +114,26 @@ result.forEach(element => {
 //СЬОМЕ ЗАВДАННЯ
 
 /* function isOdd (number) {
-    if (number % 2 !== 0)
-    return true;
-    else return false;
+    return (number % 2 !== 0)
+; 
+}
+function NumberInfo(number){
+    return {
+        Digit: number,
+        IsOdd: function(){ return !(this.Digit % 2); }
+    }
 }
 function taskSeven(array) {
-    var arr = [];
-    array.forEach(element => {
-       var result = isOdd(element);
-       var object = {Digit: element , Function: result};
-       arr.push(object);
-    });
-    return arr;
+   var arr = [];
+   array.forEach(element => {
+var obj= new NumberInfo(element);
+arr .push(obj);
+
+   });
+   return arr;
 }
-var array = [1 , 2 ,3 ,4 ,5];
+var array = [1 , 2 ,3 ,4 ,5,221,222];
 var mass = taskSeven(array);
 mass.forEach(element => {
-    console.log(element.Digit + " " + element.Function)
+    console.log(element.Digit + " " + element.IsOdd())
 }); */
